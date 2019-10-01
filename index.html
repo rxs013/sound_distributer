@@ -1,0 +1,76 @@
+﻿<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="IAたんのぷにすべほっぺ">
+<meta name="viewport" content="width=device-width">
+<title>IAたんのぷにすべほっぺ</title>
+<link rel="stylesheet" media="all" href="css/style.css">
+</head>
+
+<body>
+	<script src="js/jquery-3.4.1.js"></script>
+	<script src="js/script.js"></script>
+<nav id="mainnav">
+	<p id="menuWrap"><a id="menu"><span id="menuBtn"></span></a></p>
+	<div class="panel">
+		<ul>
+			<li><a href="#header">TOP</a></li>
+			<li><a href="#sec01">SOUNDS</a></li>
+			<!--<li><a href="#sec02">DISCS</a></li>-->
+		</ul>
+	</div>
+</nav>
+
+<header id="header">
+	<img src="images/mainImg.jpg" alt="" width="100%">
+	<div id="slogan">
+		<h1>IA's soft and smooth cheek</h1>
+		<h2>IAたんのぷにすべほっぺ</h2>
+	</div>
+</header>
+
+<!-- SOUNDS -->
+<section id="sec01">
+	<header>
+		<h2>SOUNDS</h2>
+	</header>
+	<div class="sounds">
+		<a href="./sounds/otome.flac" download="otome.flac" class="otome">オ・ト・メ・ゴ・コ・ロ</a>
+		<a href="./sounds/rindou.flac" download="rindou.flac" class="rindou">竜胆</a>
+		<a href="./sounds/kiss.flac" download="kiss.flac" class="kiss">照れ隠しkiss</a>
+	</div>
+</section>
+<!-- SOUNDS -->
+
+<!-- DISCS -->
+<!--
+<section id = "sec02">
+	<header>
+		<h2>DISCS</h2>
+	</header>
+	<div class="discs">
+		<script>
+			function getd(){
+		return $.ajax({ url: '/js/functions.php',
+         data: {action: 'getd'},
+         type: 'post',
+				});}
+				geta().done(function(result){
+					alert(result);
+					for(let i in result){
+			var $buf = '<div class="disc" id="album">'+i;
+			$('.discs').append($buf);
+				}});	
+		</script>
+	
+	</div>
+</section>
+-->
+<!-- DISCS -->
+<footer id="footer">
+	ラブリースイートマイワイフIAたん
+</footer>
+
+</body>
+</html>
