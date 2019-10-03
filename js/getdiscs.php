@@ -10,7 +10,7 @@ try {
 }
 // データ取得用SQL
 // 値はバインドさせる
-$sql = "SELECT id, name FROM disctitle";
+$sql = "SELECT * FROM disctitle";
 // SQLをセット
 $stmt = $pdo->prepare($sql);
 // SQLを実行
