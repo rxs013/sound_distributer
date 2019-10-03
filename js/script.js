@@ -28,7 +28,7 @@ function gett(disc){
          success: function(result) {
              // 取得したレコードをeachで順次取り出す
              $.each(result, function(key, value){ 
-             var $buf = '<div class="track" id='+disc+"-"+value.track+'><audio class="player" controls controlslist="nodownload" src="/discs/'+disc+ '/'+ value.file +' preload="none"></audio><p class="tracktxt">Title: '+value.title+'<br>Composer: '+value.p+'<br>Vocal: '+value.vo+'</p></div>';
+             var $buf = '<div class="track" id='+disc+"-"+value.track+'><audio class="player" controls controlslist="nodownload" src="/discs/'+disc+ '/'+ value.file +'" preload="none"></audio><p class="tracktxt">Title: '+value.title+'<br>Composer: '+value.p+'<br>Vocal: '+value.vo+'</p></div>';
              $("#"+disc+"-t").append($buf);
          })
           },
