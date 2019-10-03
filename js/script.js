@@ -10,7 +10,7 @@ function getd(){
             // 取得したレコードをeachで順次取り出す
             $.each(data, function(key, value){ 
 			var $buf = '<div class="disc" id='+value.id+'><img class="jacket" src="/discs/'+value.id+'/mini-jacket.png" onerror=\'this.src="/discs/mini-noimage.png"\'>'+value.name+"</div>";
-            $('.discs').append($buf);
+            $('.discs').prepend($buf);
             $("#"+ value.id).append('<div class="tracks" id="'+value.id+'-t"></div>');
             $("#"+ value.id+"-t").css("display","none");
             gett(value.id);
