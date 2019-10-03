@@ -214,11 +214,12 @@ section h2{
 	background: #2b2b2b;
 	padding-bottom: 3px;
 }
+
 .track{
 	border: 2px outset rgba(255, 0, 0, 0.377);
 	margin-right: 15px;
 	width: auto;
-	height: 80px;
+	height: auto;
 	background: #2b2b2b;
 	vertical-align: text-top;
 	margin-left: 35px;
@@ -234,7 +235,33 @@ section h2{
 	margin-right: 10px;
 	margin-top: 13px;
 }
+@media (max-width: 767px) { 
+	.track{
+		clear: both;
+		border: 2px outset rgba(255, 0, 0, 0.377);
+		margin-right: 15px;
+		width: auto;
+		height: auto;
+		display: block;
+		background: #2b2b2b;
+		margin-left: 35px;
+		margin-top: 3px;
+		
+	}
+	.tracktxt{
+		margin-top:3px;
+		font-size: 70%;
+		text-align: left;
+		height: auto;
+		}
+	.player{
+		margin-right: 10px;
+		margin-top: 13px;
+		}
 
+
+	
+}
 
 /* RESPONSIVE 設定
 ------------------------------------------------------------*/
