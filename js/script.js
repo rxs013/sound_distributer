@@ -16,7 +16,9 @@ function getd(){
             gett(value.id);
 		})
          }
-		 });}
+         });
+         
+              }
 
 function gett(disc){    
     $.ajax({
@@ -36,3 +38,18 @@ function gett(disc){
             alert('Error : ' + errorThrown);
           },});
 }
+
+function playerset(){
+    /*++++ オーディオ要素のリスト ++++*/
+    var container=document.querySelector("#discs");
+    var audios = container.querySelectorAll( "audio" );
+    
+    /*++++ イベント ++++*/
+    for(var i=0;i<audios.length;i++){
+    audios[ i ].addEventListener( "play", function(){
+    for(var j=0;j<audios.length;j++){
+    if( audios[ j ]!=this ){ audios[ j ].pause() }
+    }
+    }, false );
+    }
+            }

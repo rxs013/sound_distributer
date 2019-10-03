@@ -59,7 +59,8 @@
 </footer>
 <script type="text/javascript">
 	$(document).ready(
-		getd());
+		$(getd()
+		));
 		</script>
 	<script type="text/javascript">
 	$(function(){
@@ -81,7 +82,15 @@
 				$("#"+disc+"-t").toggle('fast');			
 				}			
 			 });
-		   });	  	   
+		   });
+
+	$(function(){
+		$(document).on('click',".track",function(e){
+			e.stopPropagation();
+			playerset();
+		});
+	});
+		
 		   </script>	
 </body>
 </html>
