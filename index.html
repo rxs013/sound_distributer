@@ -9,15 +9,15 @@
 </head>
 
 <body>
-	<script src="js/jquery-3.4.1.js"></script>
-	<script src="js/script.js"></script>
+	<script src="/js/jquery-3.4.1.js"></script>
+	<script src="/js/script.js"></script>
 <nav id="mainnav">
 	<p id="menuWrap"><a id="menu"><span id="menuBtn"></span></a></p>
 	<div class="panel">
 		<ul>
 			<li><a href="#header">TOP</a></li>
 			<li><a href="#sec01">SOUNDS</a></li>
-			<!--<li><a href="#sec02">DISCS</a></li>-->
+			<li><a href="#sec02">DISCS</a></li>
 		</ul>
 	</div>
 </nav>
@@ -44,29 +44,44 @@
 <!-- SOUNDS -->
 
 <!-- DISCS -->
-<!--
+
 <section id = "sec02">
 	<header>
 		<h2>DISCS</h2>
 	</header>
-	<div class="discs">
-		<script>
-			function getd(){
-		return $.ajax({ url: '/js/functions.php',
-         data: {action: 'getd'},
-         type: 'post',
-				});}
-				geta().done(function(result){
-					alert(result);
-					for(let i in result){
-			var $buf = '<div class="disc" id="album">'+i;
-			$('.discs').append($buf);
-				}});	
-		</script>
-	
+	<div class="discs" id="discs">	
+		
 	</div>
 </section>
--->
+<script type="text/javascript">
+$(document).ready(
+	getd());
+	</script>
+<script type="text/javascript">
+
+$(function(){
+		$(document).on('click','.tracks',function(e){
+			e.stopPropagation();
+		})
+	});
+
+$(function(){
+        $(document).on('click','.disc',function(e){
+			e.stopPropagation();
+			var disc =$(this).attr('id');	
+			var switch_flg = $(this).hasClass("active");	
+			if (switch_flg) {
+			$(this).removeClass("active");
+			$("#"+disc+"-t").toggle('fast');
+			}else{
+			$(this).addClass("active");
+			$("#"+disc+"-t").toggle('fast');			
+			}
+			
+		 });
+	   });	  
+
+	   </script>
 <!-- DISCS -->
 <footer id="footer">
 	ラブリースイートマイワイフIAたん
