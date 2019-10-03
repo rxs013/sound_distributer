@@ -1,6 +1,5 @@
 <?php
 // データベース接続
-ini_set('display_errors', 1);
 require_once('frconfig.php');
 //データベースへ接続、テーブルがない場合は作成
 try {
