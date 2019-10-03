@@ -52,36 +52,36 @@
 		
 	</div>
 </section>
-<script type="text/javascript">
-$(document).ready(
-	getd());
-	</script>
-<script type="text/javascript">
-$(function(){
-		$(document).on('click','.tracks',function(e){
-			e.stopPropagation();
-		})
-	});
 
-$(function(){
-        $(document).on('click','.disc',function(e){
-			e.stopPropagation();
-			var disc =$(this).attr('id');	
-			var switch_flg = $(this).hasClass("active");	
-			if (switch_flg) {
-			$(this).removeClass("active");
-			$("#"+disc+"-t").toggle('fast');
-			}else{
-			$(this).addClass("active");
-			$("#"+disc+"-t").toggle('fast');			
-			}			
-		 });
-	   });	  
-	   </script>
 <!-- DISCS -->
 <footer id="footer">
 	ラブリースイートマイワイフIAたん
 </footer>
-
+<script type="text/javascript">
+	$(document).ready(
+		getd());
+		</script>
+	<script type="text/javascript">
+	$(function(){
+			$(document).on('click','.tracks',function(e){
+				e.stopPropagation();
+			})
+		});
+	
+	$(function(){
+			$(document).on('click','.disc',function(e){
+				e.stopPropagation();
+				var disc =$(this).attr('id');	
+				var switch_flg = $(this).hasClass("active");	
+				if (switch_flg) {
+				$(this).removeClass("active");
+				$("#"+disc+"-t").toggle('fast');
+				}else{
+				$(this).addClass("active");
+				$("#"+disc+"-t").toggle('fast');			
+				}			
+			 });
+		   });	  	   
+		   </script>	
 </body>
 </html>
