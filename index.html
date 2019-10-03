@@ -79,18 +79,12 @@
 				$("#"+disc+"-t").toggle('fast');
 				}else{
 				$(this).addClass("active");
+				playerset();
 				$("#"+disc+"-t").toggle('fast');			
-				}			
+				}
+
 			 });
 		   });
-
-	$(function(){
-		$(document).on('click',".track",function(e){
-			e.stopPropagation();
-			playerset();
-		});
-	});
-		
-		   </script>	
+	   </script>	
 </body>
 </html>
